@@ -5,12 +5,18 @@ screen_x = 1366
 screen_y = 766
 screen = turtle.setup(screen_x, screen_y) #this is the screen.
 
+screen=turtle.Screen()
+screen.bgpic("sea.gif")
+screen.update()
+
 #making the bag.
 bags = turtle.Turtle()
 bags.speed(0)
 bags.penup()
 bag_list = []
 bag_list.append(bags)
+turtle.register_shape("bag.gif")
+bags.shape("bag.gif")
 
 
 #making the player.
@@ -26,7 +32,9 @@ sea_turtle.shape("turtle")
 sea_turtle_pos = []
 sea_turtle_pos.append(sea_turtle.pos())
 print(sea_turtle_pos)
-
+turtle.register_shape("sea-turtle.gif")
+sea_turtle.shape("sea-turtle.gif")
+ 
 
 max_x = 683
 min_x = -683 #min and max edge of the screen.
@@ -68,6 +76,8 @@ while y_pos > -394: #as long as the bags dont touch the border make them fall
 
     if bags.pos() == player.pos():
         bags.ht()
+
+bags.ht()
 
         
 
