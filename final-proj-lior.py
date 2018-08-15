@@ -5,6 +5,20 @@ screen_x = 1366
 screen_y = 766
 screen = turtle.setup(screen_x, screen_y) #this is the screen.
 
+
+
+
+from pygame import mixer # Load the required library
+import turtle
+
+mixer.init()
+mixer.music.load('song.mp3')
+mixer.music.play()
+
+
+
+
+
 screen=turtle.Screen()
 screen.bgpic("sea.gif")
 screen.update()
