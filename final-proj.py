@@ -7,13 +7,13 @@ screen_y = 766
 screen = turtle.setup(screen_x, screen_y) #this is the screen.
 
 screen=turtle.Screen()
-screen.bgpic("sea.gif")
+screen.bgpic("sea.gif")     #background gif
 screen.update()
 
 score=0
 
 mixer.init()
-mixer.music.load('song.mp3')
+mixer.music.load('song.mp3')    #make sound efect
 mixer.music.play()
 
 #making the bag.
@@ -56,7 +56,7 @@ def rand():
 
 bags.goto(rand() , 300)
 sea_turtle.goto(rand(),-300)
-bags1 = bags.clone()
+bags1 = bags.clone()            #make a lot of bags
 bags2 = bags.clone()
 bags3 = bags.clone()
 sea1 = sea_turtle.clone()
@@ -115,7 +115,7 @@ while y_pos > -394: #as long as the bags dont touch the border make them fall
         y = y - 20
         if y <  -200: #the player can't be less then -200
             y = -200
-        player.sety(y)
+        player.sety(y) #set the new y
 
 
 
@@ -138,9 +138,14 @@ while y_pos > -394: #as long as the bags dont touch the border make them fall
 
     if abs(x_p - x_b) < 50 and abs(y_p - y_b) < 50: #makes the bag disapear if they touch the net
         bags.ht()
+<<<<<<< HEAD
         score+=1
+=======
+        mixer.music.load('win_sound.mp3')
+        mixer.music.play() #make the winning sound
+>>>>>>> 32f21ac4fc53af7caa2e01a64461c12d80af9fe5
 
-bags.ht()
+bags.ht()    #hide the bags
 '''    
 x_p = player.xcor()
 y_p = player.ycor()
