@@ -7,14 +7,14 @@ screen_y = 766
 screen = turtle.setup(screen_x, screen_y) #this is the screen.
 
 screen=turtle.Screen()
-screen.bgpic("sea.gif")
+screen.bgpic("sea.gif")     #background gif
 screen.update()
 
 turtle.tracer(1,1)
 
 
 mixer.init()
-mixer.music.load('song.mp3')
+mixer.music.load('song.mp3')    #make sound efect
 mixer.music.play()
 
 #making the bag.
@@ -48,8 +48,14 @@ def rand():
     return random.randint(min_x,max_x) #random number for bags
 
 
+<<<<<<< HEAD
 #bags.goto(rand() , 300)
 bags1 = bags.clone()
+=======
+bags.goto(rand() , 300)
+sea_turtle.goto(rand(),-300)
+bags1 = bags.clone()            #make a lot of bags
+>>>>>>> 32f21ac4fc53af7caa2e01a64461c12d80af9fe5
 bags2 = bags.clone()
 bags3 = bags.clone()
 
@@ -96,6 +102,7 @@ def game():
     turtle.ontimer(game() , 1000)    
         #print(bags.pos())
         #print(sea_turtle.pos())
+<<<<<<< HEAD
         #print(abs(y_b - y_t))
     
 def move_left(): #move left function.
@@ -133,6 +140,50 @@ turtle.onkey(move_down, 'Down')   #make the turtle go down.
 
 turtle.ht()
 game()
+=======
+        print(abs(y_b - y_t))
+        
+    def move_left(): #move left function.
+        x = player.xcor()
+        x = x - 20
+        if x < -683: #the player can't go out of the screen.
+            x = -683
+        player.setx(x) #set the new x
+
+    def move_right(): #move right function.   
+        x = player.xcor()
+        x = x + 20
+        if x > 683: #the player can't go out of the screen.
+            x = 683
+        player.setx(x) #set the new x
+    def move_up (): # move up function
+        y = player.ycor()
+        y = y + 20
+        if y > 0: # the player can't go up more than 0.
+            y = 0
+        player.sety(y) #set the new y.
+    def move_down (): #move up function
+        y = player.ycor()
+        y = y - 20
+        if y <  -200: #the player can't be less then -200
+            y = -200
+        player.sety(y) #set the new y
+
+
+    turtle.listen()
+    turtle.onkey(move_left, 'Left')   #make the turtle move left.
+    turtle.onkey(move_right, 'Right') #make the turtle move right.
+    turtle.onkey(move_up, 'Up')       #make the turtle nove up.
+    turtle.onkey(move_down, 'Down')   #make the turtle go down.
+
+
+    if abs(x_p - x_b) < 50 and abs(y_p - y_b) < 50: #makes the bag disapear if they touch the net
+        bags.ht()
+        mixer.music.load('win_sound.mp3')
+        mixer.music.play() #make the winning sound
+
+bags.ht()    #hide the bags
+>>>>>>> 32f21ac4fc53af7caa2e01a64461c12d80af9fe5
 '''    
 x_p = player.xcor()
 y_p = player.ycor()
