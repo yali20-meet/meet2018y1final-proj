@@ -9,6 +9,8 @@ screen=turtle.Screen()
 screen.bgpic("sea.gif")
 screen.update()
 
+score = 0
+
 #making the bag.
 bags = turtle.Turtle()
 bags.speed(0)
@@ -77,8 +79,20 @@ while y_pos > -394: #as long as the bags dont touch the border make them fall
 
     if bags.pos() == player.pos():
         bags.ht()
+        score+=1
+
+
+    turtle.clear()
+    turtle.penup
+    turtle.goto(600,300)
+    turtle.write(score,font=("Arial", 20))
+    
+        
 
 bags.ht()
+
+
+    
 
         
 
