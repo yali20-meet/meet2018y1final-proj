@@ -22,7 +22,8 @@ bags.shape("bag.gif")
 #making the player.
 player = turtle.Turtle() 
 player.pu()
-
+turtle.register_shape("net.gif")
+player.shape("net.gif")
 
 #making the sea turtles.
 sea_turtle = turtle.Turtle()
@@ -40,7 +41,7 @@ max_x = 683
 min_x = -683 #min and max edge of the screen.
 rand = random.randint(min_x,max_x) #random number for bags
 rand2 = random.randint(min_x,max_x) #random number for sea turtles
-bags.goto(rand, 200) #we set the bags to go to the random number
+bags.goto(rand, 300) #we set the bags to go to the random number
 sea_turtle.goto(rand , -300) #we set the turtles to go to the random number
 
 y_pos = bags.ycor() #gets the y position
