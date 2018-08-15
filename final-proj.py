@@ -7,7 +7,7 @@ screen_y = 766
 screen = turtle.setup(screen_x, screen_y) #this is the screen.
 
 screen=turtle.Screen()
-screen.bgpic("sea.gif")     #background gif
+screen.bgpic("sea.gif")
 screen.update()
 
 <<<<<<< HEAD
@@ -18,7 +18,7 @@ turtle.tracer(1,1)
 >>>>>>> 4838dabaf24eb81dbbb5a69c9d82554665af7b4a
 
 mixer.init()
-mixer.music.load('song.mp3')    #make sound efect
+mixer.music.load('song.mp3')
 mixer.music.play()
 
 #making the bag.
@@ -52,14 +52,8 @@ def rand():
     return random.randint(min_x,max_x) #random number for bags
 
 
-<<<<<<< HEAD
-#bags.goto(rand() , 300)
+
 bags1 = bags.clone()
-=======
-bags.goto(rand() , 300)
-sea_turtle.goto(rand(),-300)
-bags1 = bags.clone()            #make a lot of bags
->>>>>>> 32f21ac4fc53af7caa2e01a64461c12d80af9fe5
 bags2 = bags.clone()
 bags3 = bags.clone()
 
@@ -106,7 +100,6 @@ def game():
     turtle.ontimer(game() , 1000)    
         #print(bags.pos())
         #print(sea_turtle.pos())
-<<<<<<< HEAD
         #print(abs(y_b - y_t))
     
 def move_left(): #move left function.
@@ -144,6 +137,7 @@ turtle.onkey(move_down, 'Down')   #make the turtle go down.
 
 turtle.ht()
 game()
+<<<<<<< HEAD
 =======
         print(abs(y_b - y_t))
         
@@ -203,6 +197,8 @@ game()
 
 bags.ht()    #hide the bags
 >>>>>>> 32f21ac4fc53af7caa2e01a64461c12d80af9fe5
+=======
+>>>>>>> 2f660c5973cfbb3d7516f1e6bb6cc2ac089ab742
 '''    
 x_p = player.xcor()
 y_p = player.ycor()
