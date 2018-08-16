@@ -52,7 +52,7 @@ def rand():
     return random.randint(min_x,max_x) #random number for bags
 
 
-
+#we clone everybody
 bags1 = bags.clone()
 bags2 = bags.clone()
 bags3 = bags.clone()
@@ -67,7 +67,7 @@ sea7 = sea_turtle.clone()
 sea8 = sea_turtle.clone()
 sea_list = [ sea_turtle, sea1 , sea2, sea3 ,sea4 , sea5 ,sea6, sea7, sea8]
 turtle_num = 9
-
+#make the clones goto their spot
 sea1.goto(rand() , -300)
 sea2.goto(rand() , -300)
 sea3.goto(rand() , -300)
