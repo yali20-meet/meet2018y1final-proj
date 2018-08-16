@@ -102,8 +102,10 @@ while y_pos > -394: #as long as the bags dont touch the border make them fall
     turtle.onkey(move_up, 'Up')       #make the turtle nove up.
     turtle.onkey(move_down, 'Down')   #make the turtle go down.
 
-    if bags.pos() == player.pos():
+    if abs(bags.pos()[0]-player.pos()[0])<20 and  abs(bags.pos()[1]-player.pos()[1])< 20:
         bags.ht()
+        mixer.music.load('win_sound.mp3')
+        mixer.music.play() #make the winning sound
 
 bags.ht()
 

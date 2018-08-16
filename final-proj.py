@@ -133,13 +133,16 @@ def game():
         c.goto(rand() , -300)
 
     if turtle_num == 0:
-        quit()
-
-
-    turtle.clear()
-    turtle.write(score, font=("Arial", 20))
-    sc.undo()
-    sc.write(score1, font=("Arial", 20))
+        turtle.goto(-500,0)
+        turtle.write("YOU ARE LOSERS" +"\nHIT SPACE TO QUIT",font=("Arial", 80))
+        def enter():
+            quit()
+        turtle.onkeypress(enter, "space")
+    else:     
+        turtle.clear()
+        turtle.write(score, font=("Arial", 40))
+        sc.undo()
+        sc.write(score1, font=("Arial", 40))
 
     
     turtle.ontimer(game, 10)    
@@ -207,7 +210,6 @@ turtle.onkey(move_left2, 'a')   #make the turtle move left.
 turtle.onkey(move_right2, 'd') #make the turtle move right.
 turtle.onkey(move_up2, 'w')       #make the turtle nove up.
 turtle.onkey(move_down2, 's')   #make the turtle go down.
-
 
 
 
