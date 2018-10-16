@@ -9,7 +9,7 @@ screen = turtle.setup(screen_x, screen_y) #this is the screen.
 screen=turtle.Screen()
 screen.bgpic("sea.gif")
 screen.update()
-
+      
 turtle.tracer(1,1)
 
 mixer.init()
@@ -23,7 +23,7 @@ bags.penup()
 
 turtle.register_shape("bag.gif")
 bags.shape("bag.gif")
-
+#STFU
 #making the player.
 player = turtle.Turtle() 
 player.pu()
